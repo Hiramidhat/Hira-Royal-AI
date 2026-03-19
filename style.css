@@ -1,0 +1,130 @@
+:root {
+    --primary-neon: #00f2ff;
+    --secondary-neon: #ff007f;
+    --bg-dark: #0a0b1e;
+    --glass-bg: rgba(255, 255, 255, 0.05);
+}
+
+body {
+    background: radial-gradient(circle at center, #1a1b3a 0%, var(--bg-dark) 100%);
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: white;
+}
+
+.chat-container {
+    width: 400px;
+    height: 600px;
+    background: var(--glass-bg);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(0, 242, 255, 0.3);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 20px rgba(0, 242, 255, 0.1), inset 0 0 10px rgba(255, 255, 255, 0.05);
+    overflow: hidden;
+}
+
+header {
+    padding: 20px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.3);
+    border-bottom: 1px solid var(--primary-neon);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+    text-shadow: 0 0 10px var(--primary-neon);
+}
+
+#chat-box {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Custom Scrollbar */
+#chat-box::-webkit-scrollbar {
+    width: 5px;
+}
+#chat-box::-webkit-scrollbar-thumb {
+    background: var(--primary-neon);
+    border-radius: 10px;
+}
+
+.message {
+    padding: 12px 16px;
+    border-radius: 15px;
+    max-width: 80%;
+    font-size: 14px;
+    line-height: 1.4;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.user-message {
+    align-self: flex-end;
+    background: linear-gradient(135deg, var(--secondary-neon), #b00058);
+    color: white;
+    border-bottom-right-radius: 2px;
+    box-shadow: 0 4px 15px rgba(255, 0, 127, 0.3);
+}
+
+.bot-message {
+    align-self: flex-start;
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--primary-neon);
+    border: 1px solid var(--primary-neon);
+    border-bottom-left-radius: 2px;
+    box-shadow: 0 0 10px rgba(0, 242, 255, 0.1);
+}
+
+.input-area {
+    padding: 20px;
+    display: flex;
+    gap: 10px;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+input {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(0, 242, 255, 0.3);
+    border-radius: 25px;
+    padding: 12px 20px;
+    color: white;
+    outline: none;
+    transition: 0.3s;
+}
+
+input:focus {
+    border-color: var(--primary-neon);
+    box-shadow: 0 0 10px rgba(0, 242, 255, 0.3);
+}
+
+button {
+    background: var(--primary-neon);
+    border: none;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+    box-shadow: 0 0 15px var(--primary-neon);
+}
+
+button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 25px var(--primary-neon);
+}

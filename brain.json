@@ -1,0 +1,34 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": ["hi", "hello", "hey", "good morning", "assalam o alaikum"],
+      "responses": ["Hello! How can I help you today?", "Hi there! Ready to chat?", "Greetings! What's on your mind?"]
+    },
+    {
+      "tag": "identity",
+      "patterns": ["who are you", "what is your name", "tell me about yourself"],
+      "responses": ["I am your AI Assistant, built with Python and SpaCy.", "I'm a SmartBot created to help you with your CS projects!"]
+    },
+    {
+      "tag": "radar_project",
+      "patterns": ["radar system", "ultrasonic sensor", "object detection", "dld project"],
+      "responses": ["Oh, the Radar System! That uses ultrasonic sensors and microcontrollers for object detection, right?", "Radar systems are fascinating! Are you working on the interface or the hardware?"]
+    },
+    {
+      "tag": "cryptography",
+      "patterns": ["linear algebra", "cryptography", "hill cipher", "matrix multiplication"],
+      "responses": ["Linear Algebra is the backbone of Cryptography, especially in Hill Ciphers using matrix multiplication!", "Are we talking about encrypting messages using matrices today?"]
+    },
+    {
+      "tag": "study_tips",
+      "patterns": ["give me a tip for studying", "how to study better", "study advice", "exam help"],
+      "responses": ["Try the Pomodoro technique: 25 minutes of focus, then a 5-minute break!", "Active recall and spaced repetition are the best ways to remember complex CS concepts."]
+    },
+    {
+      "tag": "ai_info",
+      "patterns": ["what is ai", "artificial intelligence", "machine learning"],
+      "responses": ["AI is the simulation of human intelligence by machines.", "Artificial Intelligence is helping us build smarter systems like the one we are using right now!"]
+    }
+  ]
+}
